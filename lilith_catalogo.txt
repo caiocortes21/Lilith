@@ -1,0 +1,244 @@
+LILITH - catálogo do modelo
+146 animações, 33 skins
+
+=== ANIMAÇÕES (agrupadas pelo começo do nome) ===
+
+[emoji] (1)
+  emoji_none
+
+[emoji_angry] (2)
+  emoji_angry_1
+  emoji_angry_2
+
+[emoji_awkward] (1)
+  emoji_awkward_1
+
+[emoji_calm] (1)
+  emoji_calm_1
+
+[emoji_daze] (5)
+  emoji_daze_1
+  emoji_daze_2
+  emoji_daze_3
+  emoji_daze_4
+  emoji_daze_5
+
+[emoji_fear] (2)
+  emoji_fear_1
+  emoji_fear_2
+
+[emoji_front] (1)
+  emoji_front_blink
+
+[emoji_sad] (2)
+  emoji_sad_1
+  emoji_sad_2
+
+[emoji_side] (1)
+  emoji_side_blink
+
+[emoji_sleepy] (3)
+  emoji_sleepy_1
+  emoji_sleepy_2
+  emoji_sleepy_3
+
+[emoji_smile] (6)
+  emoji_smile_1
+  emoji_smile_2
+  emoji_smile_3
+  emoji_smile_4
+  emoji_smile_5
+  emoji_smile_6
+
+[emoji_sofa] (1)
+  emoji_sofa_blink
+
+[emoji_surprise] (3)
+  emoji_surprise_1
+  emoji_surprise_2
+  emoji_surprise_3
+
+[emoji_wronged] (2)
+  emoji_wronged_1
+  emoji_wronged_2
+
+[left_casual] (3)
+  left_casual_idle
+  left_casual_walk
+  left_casual_walkend
+
+[lie_pajamas] (5)
+  lie_pajamas_flirt
+  lie_pajamas_idle
+  lie_pajamas_shake_leg
+  lie_pajamas_snap
+  lie_pajamas_stand_up
+
+[right_casual] (3)
+  right_casual_idle
+  right_casual_walk
+  right_casual_walkend
+
+[show] (14)
+  show_01
+  show_010
+  show_011
+  show_012
+  show_013
+  show_014
+  show_02
+  show_03
+  show_04
+  show_05
+  show_06
+  show_07
+  show_08
+  show_09
+
+[show_03] (1)
+  show_03_idle
+
+[sit_casual] (6)
+  sit_casual_get_off_sofa
+  sit_casual_idle
+  sit_casual_shake_leg
+  sit_casual_sofa_doubt
+  sit_casual_sofa_idle
+  sit_casual_turnhead
+
+[sleep_pajamas] (12)
+  sleep_pajamas_cover_blanket
+  sleep_pajamas_idle
+  sleep_pajamas_idle_bare
+  sleep_pajamas_lie_down
+  sleep_pajamas_lie_down_bare
+  sleep_pajamas_mumble
+  sleep_pajamas_rub_eyes
+  sleep_pajamas_rub_eyes_bare
+  sleep_pajamas_snap
+  sleep_pajamas_stand_up
+  sleep_pajamas_take_blanket
+  sleep_pajamas_twitch_bare
+
+[stand_casual] (55)
+  stand_casual_arrange
+  stand_casual_back
+  stand_casual_back_prepare
+  stand_casual_blush
+  stand_casual_cake_end
+  stand_casual_cake_idle
+  stand_casual_cake_up
+  stand_casual_clap
+  stand_casual_confetti
+  stand_casual_confuse
+  stand_casual_dessert_idle
+  stand_casual_dessert_up
+  stand_casual_drowsy
+  stand_casual_empty_hands
+  stand_casual_fake_angry
+  stand_casual_fake_cry
+  stand_casual_fake_wronged
+  stand_casual_falled
+  stand_casual_falling
+  stand_casual_flirt
+  stand_casual_gift_give
+  stand_casual_greet
+  stand_casual_half_awake
+  stand_casual_happy_sigh
+  stand_casual_hide
+  stand_casual_idle
+  stand_casual_intro
+  stand_casual_lazy_wave
+  stand_casual_look_around
+  stand_casual_look_down
+  stand_casual_magic_cast
+  stand_casual_music
+  stand_casual_peek_end
+  stand_casual_peek_idle
+  stand_casual_perk_yawn
+  stand_casual_pout
+  stand_casual_pucker
+  stand_casual_rub_eyes
+  stand_casual_rub_face
+  stand_casual_rub_head
+  stand_casual_screen_peek
+  stand_casual_shy_giggle
+  stand_casual_sit_down
+  stand_casual_small_yawn
+  stand_casual_snap
+  stand_casual_sneeze_tiny
+  stand_casual_spread
+  stand_casual_squint
+  stand_casual_stern_smile
+  stand_casual_stretch
+  stand_casual_tense
+  stand_casual_think
+  stand_casual_to_sofa
+  stand_casual_up_left
+  stand_casual_yawn
+
+[stand_pajamas] (11)
+  stand_pajamas_drowsy_slump
+  stand_pajamas_falled
+  stand_pajamas_falling
+  stand_pajamas_idle
+  stand_pajamas_magic_cast
+  stand_pajamas_music
+  stand_pajamas_rub_head
+  stand_pajamas_snap
+  stand_pajamas_stretch
+  stand_pajamas_tsundere
+  stand_pajamas_yawn
+
+[talk] (1)
+  talk_lie
+
+[talk_happy] (2)
+  talk_happy_long
+  talk_happy_short
+
+[talk_sad] (2)
+  talk_sad_long
+  talk_sad_short
+
+
+=== SKINS (roupas, cenários, acessórios) ===
+
+[acc] (23)
+  acc/bedding_blueberry
+  acc/bedding_chocolate
+  acc/bedding_dot
+  acc/bedding_lemon
+  acc/bedding_milk
+  acc/bedding_strawberry
+  acc/blackcat
+  acc/glodglasses
+  acc/monocle
+  acc/rainbowglasses
+  acc/sofa01
+  acc/sofa02
+  acc/sofa03
+  acc/sofa04
+  acc/sofa05
+  acc/sofa06
+  acc/sofa07
+  acc/sofa08
+  acc/strawberrypudhat
+  acc/sunglasses
+  acc/sunhat
+  acc/whitecat
+  acc/whitedog
+
+[cfund] (1)
+  cfund/cakehat
+
+[default] (9)
+  default
+  default/bedding
+  default/birthday
+  default/cake
+  default/casual
+  default/glasses_none
+  default/hat_none
+  default/pajamas
+  default/sofa

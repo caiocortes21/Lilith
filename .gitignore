@@ -1,0 +1,18 @@
+.env
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# memória e histórico pessoais
+lilith_memoria.json
+lilith_historico.jsonl
+lilith_vetores.f32
+lilith_vetores.f32.json
+
+# assets do jogo (Spine, texturas)
+*.skel
+*.atlas
+*.png
+*.bytes
+assets/spine/ui/

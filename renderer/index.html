@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="spine-player.css">
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; width: 100%; height: 100%; }
+  #player { width: 100%; height: 100%; background: transparent; }
+  .spine-player, .spine-player-canvas { background: transparent !important; }
+</style>
+</head>
+<body>
+<div id="player"></div>
+<script src="spine-player.js"></script>
+<script>
+  // Roupa/acessórios padrão (o modelo é montado juntando skins)
+  const DEFAULT_SKINS = ["default", "default/casual", "default/glasses_none", "default/hat_none"];
+  const IDLE = "stand_casual_idle";
+
+  // Trilhas: 0 = corpo, 1 = boca, 2 = expressão, 3 = piscar
+  const T_BODY = 0, T_MOUTH = 1, T_FACE = 2, T_BLINK = 3;
+
+  let player = null;
+  let thinking = false;
+
+  const has = (n) => player && player.skeleton && player.skeleton.data.findAnimation(n) !== null;
+  const state = () => player && player.animationState;
+
+  function applySkins(names) {
+    const data = player.skeleton.data;
+    const skin = new spine.Skin("combined");
+    for (const n of names) {
+      const s = data.findSkin(n);
+      if (s) skin.addSkin(s); else console.log("Skin nao encontrada: " + n);
+    }
+    player.skeleton.setSkin(skin);
+    player.skeleton.setSlotsToSetupPose();
+  }
+
+  window.lilith = {
+    setBody(name, loop, thenIdle) {
+      if (!state() || !has(name)) { console.log("Animacao nao encontrada: " + name); return; }
+      state().setAnimation(T_BODY, name, loop);
+      if (!loop && thenIdle && has(thenIdle)) state().addAnimation(T_BODY, thenIdle, true, 0);
+    },
+    setFace(name) {
+      if (!state() || !has(name)) { console.log("Expressao nao encontrada: " + name); return; }
+      state().setAnimation(T_FACE, name, false);   // mantém a expressão até trocar
+    },
+    setMouth(name) {
+      if (!state()) return;
+      if (name && has(name)) state().setAnimation(T_MOUTH, name, true);
+      else state().setEmptyAnimation(T_MOUTH, 0.15);
+    },
+    // pensando: corpo "think" em loop; ao parar, volta pro idle
+    setThinking(on, thinkBody, idleBody, face) {
+      if (!state()) return;
+      if (on) {
+        thinking = true;
+        if (has(thinkBody)) state().setAnimation(T_BODY, thinkBody, true);
+        if (face && has(face)) state().setAnimation(T_FACE, face, false);
+      } else if (thinking) {
+        thinking = false;
+        if (has(idleBody)) state().setAnimation(T_BODY, idleBody, true);
+        if (face && has(face)) state().setAnimation(T_FACE, face, false);
+      }
+    },
+    setSkins(names) { if (player && player.skeleton) applySkins(names); },
+    listAnimations() { return player && player.skeleton ? player.skeleton.data.animations.map(a => a.name) : []; },
+    listSkins() { return player && player.skeleton ? player.skeleton.data.skins.map(s => s.name) : []; }
+  };
+
+  player = new spine.SpinePlayer("player", {
+    skeleton: "../assets/spine/Lilith.skel",
+    atlas: "../assets/spine/Lilith.atlas",
+    animation: IDLE,
+    backgroundColor: "#00000000",
+    alpha: true,
+    premultipliedAlpha: true,
+    showControls: false,
+    interactive: false,
+    preserveDrawingBuffer: false,
+    // Enquadramento calculado a partir do corpo em pé (com folga)
+    viewport: { x: -1360, y: -190, width: 2977, height: 4817, debugRender: false },
+    success: function (p) {
+      p.animationState.data.defaultMix = 0.2;      // crossfade suave
+      applySkins(DEFAULT_SKINS);
+      if (has("emoji_front_blink")) p.animationState.setAnimation(T_BLINK, "emoji_front_blink", true);
+      if (has("emoji_none")) p.animationState.setAnimation(T_FACE, "emoji_none", false);
+    },
+    error: function (p, msg) { console.log("Erro ao carregar o Spine: " + msg); }
+  });
+</script>
+</body>
+</html>
